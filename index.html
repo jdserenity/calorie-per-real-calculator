@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="theme-color" content="#0f172a" />
+    <title>Calorie per Real</title>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="icons/icon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>Calorie per Real</h1>
+      <p class="subtitle">iPhone-only personal grocery helper.</p>
+
+      <section class="card">
+        <label for="caloriesPerPortion">Calories per portion</label>
+        <input id="caloriesPerPortion" type="number" inputmode="decimal" min="0" step="any" />
+
+        <label for="portions">Number of portions</label>
+        <input id="portions" type="number" inputmode="decimal" min="0" step="any" />
+
+        <label for="cost">Cost (R$)</label>
+        <input id="cost" type="number" inputmode="decimal" min="0" step="any" />
+
+        <div class="result">
+          Current calories/real:
+          <strong id="currentRatio">--</strong>
+        </div>
+
+        <button id="addToCart" type="button">Add to cart</button>
+      </section>
+
+      <section class="card">
+        <h2>Cart ratios</h2>
+        <ul id="cartList" class="cart-list"></ul>
+        <div class="total">
+          Trip total calories/real:
+          <strong id="tripTotalRatio">--</strong>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>

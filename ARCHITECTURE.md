@@ -1,0 +1,25 @@
+# Calorie per Real PWA
+
+## Product Scope
+- App purpose: calculate calories per real while grocery shopping.
+- Target platform: iPhone only.
+- Audience: single-user personal tool; no other users.
+
+## Core Behavior
+- Inputs per item:
+  - calories per portion
+  - number of portions
+  - cost in reais
+- Current item ratio is computed live as soon as inputs are valid.
+- Formula:
+  - total calories for item = calories per portion * number of portions
+  - calories per real ratio = total calories for item / cost in reais
+- User can add current item to a metaphorical cart.
+- Cart tracks each added item's calories-per-real ratio.
+- End-of-trip total ratio is computed from cart totals:
+  - cart total calories / cart total cost in reais
+
+## System Decisions
+- Architecture: static client-side PWA (no backend).
+- Data storage: local-only persistence on device for cart state.
+- Offline behavior: app shell and assets cached for offline use.
