@@ -13,21 +13,20 @@
   </head>
   <body>
     <main class="app">
-      <h1>Calorie per Real</h1>
-      <p class="subtitle">iPhone-only personal grocery helper.</p>
+      <h1>Calories per Real</h1>
 
       <section class="card">
-        <label for="caloriesPerPortion">Calories per portion</label>
+        <label for="caloriesPerPortion">Calories per portion:</label>
         <input id="caloriesPerPortion" type="number" inputmode="decimal" min="0" step="any" />
 
-        <label for="portions">Number of portions</label>
+        <label for="portions">Number of portions:</label>
         <input id="portions" type="number" inputmode="decimal" min="0" step="any" />
 
-        <label for="cost">Cost (R$)</label>
+        <label for="cost">Cost (R$):</label>
         <input id="cost" type="number" inputmode="decimal" min="0" step="any" />
 
         <div class="result">
-          Current calories/real:
+          Calories/real:
           <strong id="currentRatio">--</strong>
         </div>
 
