@@ -1,10 +1,11 @@
-const CACHE_NAME = "calorie-per-real-v2";
+const CACHE_NAME = "calorie-per-real-v3";
 const ASSETS = [
   "/",
   "/index.html",
   "/styles.css",
   "/manifest.webmanifest",
   "/src/main.js",
+  "/src/inputUtils.js",
   "/src/tripState.js",
   "/src/storage.js",
   "/icons/icon.svg",

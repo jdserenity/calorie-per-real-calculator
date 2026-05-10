@@ -1,9 +1,11 @@
 import { addItem, computeCurrentItem, formatRatio, summarizeTrip } from "./tripState.js";
+import { clearInputElements } from "./inputUtils.js";
 import { clearCart, loadCart, saveCart } from "./storage.js";
 
 const caloriesInput = document.querySelector("#caloriesPerPortion");
 const portionsInput = document.querySelector("#portions");
 const costInput = document.querySelector("#cost");
+const clearEntriesButton = document.querySelector("#clearEntries");
 const currentRatioEl = document.querySelector("#currentRatio");
 const addToCartButton = document.querySelector("#addToCart");
 const cartList = document.querySelector("#cartList");
@@ -45,13 +47,16 @@ function renderCurrentRatio() {
 }
 
 function clearInputs() {
-  caloriesInput.value = "";
-  portionsInput.value = "";
-  costInput.value = "";
+  clearInputElements([caloriesInput, portionsInput, costInput]);
 }
 
 [caloriesInput, portionsInput, costInput].forEach((input) => {
   input.addEventListener("input", renderCurrentRatio);
+});
+
+clearEntriesButton.addEventListener("click", () => {
+  clearInputs();
+  renderCurrentRatio();
 });
 
 addToCartButton.addEventListener("click", () => {

@@ -11,6 +11,7 @@
   - number of portions
   - cost in reais
 - Current item ratio is computed live as soon as inputs are valid.
+- User can clear the three current-item entry fields with one control without adding to the cart.
 - Formula:
   - total calories for item = calories per portion * number of portions
   - calories per real ratio = total calories for item / cost in reais
