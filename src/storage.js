@@ -14,3 +14,7 @@ export function loadCart() {
 export function saveCart(cartItems) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(cartItems));
 }
+
+export function clearCart() {
+  localStorage.removeItem(STORAGE_KEY);
+}

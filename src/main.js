@@ -1,5 +1,5 @@
 import { addItem, computeCurrentItem, formatRatio, summarizeTrip } from "./tripState.js";
-import { loadCart, saveCart } from "./storage.js";
+import { clearCart, loadCart, saveCart } from "./storage.js";
 
 const caloriesInput = document.querySelector("#caloriesPerPortion");
 const portionsInput = document.querySelector("#portions");
@@ -8,6 +8,7 @@ const currentRatioEl = document.querySelector("#currentRatio");
 const addToCartButton = document.querySelector("#addToCart");
 const cartList = document.querySelector("#cartList");
 const tripTotalRatioEl = document.querySelector("#tripTotalRatio");
+const clearCartButton = document.querySelector("#clearCart");
 
 let cartItems = loadCart();
 
@@ -21,6 +22,7 @@ function currentDraftItem() {
 
 function renderCart() {
   cartList.innerHTML = "";
+  clearCartButton.disabled = cartItems.length === 0;
   if (cartItems.length === 0) {
     const empty = document.createElement("li");
     empty.textContent = "No items yet.";
@@ -59,6 +61,15 @@ addToCartButton.addEventListener("click", () => {
   saveCart(cartItems);
   clearInputs();
   renderCurrentRatio();
+  renderCart();
+});
+
+clearCartButton.addEventListener("click", () => {
+  if (cartItems.length === 0) return;
+  const shouldClear = window.confirm("Are you sure you want to clear the cart?");
+  if (!shouldClear) return;
+  cartItems = [];
+  clearCart();
   renderCart();
 });
 
