@@ -28,3 +28,4 @@
 - Viewport behavior: zoom is disabled to mimic native app interaction.
 - App icons are delivered as PNG assets for iOS home-screen compatibility.
 - Deployment artifact: static `dist/` directory produced by `npm run build`.
+- Hosting: served as a static site on Cloudflare Pages.
