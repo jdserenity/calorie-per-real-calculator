@@ -1,4 +1,4 @@
-const CACHE_NAME = "calorie-per-real-v1";
+const CACHE_NAME = "calorie-per-real-v2";
 const ASSETS = [
   "/",
   "/index.html",
@@ -7,7 +7,10 @@ const ASSETS = [
   "/src/main.js",
   "/src/tripState.js",
   "/src/storage.js",
-  "/icons/icon.svg"
+  "/icons/icon.svg",
+  "/icons/icon-192.png",
+  "/icons/icon-512.png",
+  "/icons/apple-touch-icon.png"
 ];
 
 self.addEventListener("install", (event) => {

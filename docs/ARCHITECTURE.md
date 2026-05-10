@@ -25,4 +25,5 @@
 - Data storage: local-only persistence on device for cart state.
 - Offline behavior: app shell and assets cached for offline use.
 - Viewport behavior: zoom is disabled to mimic native app interaction.
+- App icons are delivered as PNG assets for iOS home-screen compatibility.
 - Deployment artifact: static `dist/` directory produced by `npm run build`.
