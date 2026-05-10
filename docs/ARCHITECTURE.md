@@ -24,4 +24,5 @@
 - Architecture: static client-side PWA (no backend).
 - Data storage: local-only persistence on device for cart state.
 - Offline behavior: app shell and assets cached for offline use.
+- Viewport behavior: zoom is disabled to mimic native app interaction.
 - Deployment artifact: static `dist/` directory produced by `npm run build`.
